@@ -29,5 +29,7 @@ C:\Users\Alina\Desktop\СПБГТИ(ТУ)\4 семестр\РПС\lab4\lab4\bin\
 C:\Users\Alina\Desktop\СПБГТИ(ТУ)\4 семестр\РПС\lab4\lab4\bin\Debug\System.Memory.xml
 C:\Users\Alina\Desktop\СПБГТИ(ТУ)\4 семестр\РПС\lab4\lab4\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Alina\Desktop\СПБГТИ(ТУ)\4 семестр\РПС\lab4\lab4\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\Alina\Desktop\СПБГТИ(ТУ)\4 семестр\РПС\lab4\lab4\obj\Debug\lab4.Form.resources
 C:\Users\Alina\Desktop\СПБГТИ(ТУ)\4 семестр\РПС\lab4\lab4\bin\Debug\DataBase.db
+C:\Users\Alina\Desktop\СПБГТИ(ТУ)\4 семестр\РПС\lab4\lab4\obj\Debug\lab4.OK.resources
+C:\Users\Alina\Desktop\СПБГТИ(ТУ)\4 семестр\РПС\lab4\lab4\obj\Debug\lab4.Question.resources
+C:\Users\Alina\Desktop\СПБГТИ(ТУ)\4 семестр\РПС\lab4\lab4\obj\Debug\lab4.ChangeForm.resources

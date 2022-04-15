@@ -1,5 +1,5 @@
 ﻿namespace lab4 {
-    partial class Form {
+    partial class Question {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -48,24 +48,26 @@
             // 
             // textName
             // 
-            this.textName.Location = new System.Drawing.Point(67, 33);
+            this.textName.Location = new System.Drawing.Point(28, 42);
             this.textName.Name = "textName";
-            this.textName.Size = new System.Drawing.Size(75, 22);
+            this.textName.Size = new System.Drawing.Size(130, 22);
             this.textName.TabIndex = 3;
+            this.textName.TextChanged += new System.EventHandler(this.textName_TextChanged);
             // 
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(17, 39);
+            this.labelName.Location = new System.Drawing.Point(83, 20);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(44, 16);
             this.labelName.TabIndex = 4;
             this.labelName.Text = "Name";
+           
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(174, 39);
+            this.label2.Location = new System.Drawing.Point(204, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 16);
             this.label2.TabIndex = 6;
@@ -73,15 +75,15 @@
             // 
             // textCount
             // 
-            this.textCount.Location = new System.Drawing.Point(221, 36);
+            this.textCount.Location = new System.Drawing.Point(164, 42);
             this.textCount.Name = "textCount";
-            this.textCount.Size = new System.Drawing.Size(75, 22);
+            this.textCount.Size = new System.Drawing.Size(122, 22);
             this.textCount.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(331, 39);
+            this.label3.Location = new System.Drawing.Point(351, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 16);
             this.label3.TabIndex = 8;
@@ -89,15 +91,15 @@
             // 
             // textSupplier
             // 
-            this.textSupplier.Location = new System.Drawing.Point(394, 39);
+            this.textSupplier.Location = new System.Drawing.Point(292, 42);
             this.textSupplier.Name = "textSupplier";
-            this.textSupplier.Size = new System.Drawing.Size(75, 22);
+            this.textSupplier.Size = new System.Drawing.Size(158, 22);
             this.textSupplier.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(481, 39);
+            this.label4.Location = new System.Drawing.Point(496, 20);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 16);
             this.label4.TabIndex = 10;
@@ -105,15 +107,15 @@
             // 
             // textDate
             // 
-            this.textDate.Location = new System.Drawing.Point(523, 39);
+            this.textDate.Location = new System.Drawing.Point(456, 42);
             this.textDate.Name = "textDate";
-            this.textDate.Size = new System.Drawing.Size(75, 22);
+            this.textDate.Size = new System.Drawing.Size(130, 22);
             this.textDate.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(628, 39);
+            this.label5.Location = new System.Drawing.Point(631, 20);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 16);
             this.label5.TabIndex = 12;
@@ -121,12 +123,12 @@
             // 
             // textPrise
             // 
-            this.textPrise.Location = new System.Drawing.Point(672, 39);
+            this.textPrise.Location = new System.Drawing.Point(592, 42);
             this.textPrise.Name = "textPrise";
-            this.textPrise.Size = new System.Drawing.Size(75, 22);
+            this.textPrise.Size = new System.Drawing.Size(129, 22);
             this.textPrise.TabIndex = 11;
             // 
-            // Form
+            // Question
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -142,7 +144,8 @@
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.textName);
             this.Controls.Add(this.button1);
-            this.Name = "Form";
+            this.Name = "Question";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form_Load);
             this.ResumeLayout(false);
