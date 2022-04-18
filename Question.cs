@@ -30,8 +30,7 @@ namespace lab4 {
         }
 
         private void textName_TextChanged(object sender, EventArgs e) {
-            
-         
+                    
         }
         
 

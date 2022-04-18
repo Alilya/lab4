@@ -9,22 +9,25 @@ namespace lab4 {
         private SQLiteConnection connection;
         public DataBase() { }
         SQLiteCommand command;
+        static List<Product> data;
         public void Add(List<string> list) {
             MakeConnaction();
-            command = new SQLiteCommand($"INSERT INTO [ProductList] ('Name','Count','Supplier','Date','Prise') " +
-                $"VALUES (@Name,@Count,@Supplier,@Date,@Prise)", connection);
-            command.Parameters.AddWithValue("Name", list[0]);
-            command.Parameters.AddWithValue("Count", list[1]);
-            command.Parameters.AddWithValue("Supplier", list[2]);
-            command.Parameters.AddWithValue("Date", list[3]);
-            command.Parameters.AddWithValue("Prise", list[4]);
-            command.ExecuteNonQuery();
+            if (list != null) {
+                command = new SQLiteCommand($"INSERT INTO [ProductList] ('Name','Count','Supplier','Date','Prise') " +
+                    $"VALUES (@Name,@Count,@Supplier,@Date,@Prise)", connection);
+                command.Parameters.AddWithValue("Name", list[0]);
+                command.Parameters.AddWithValue("Count", list[1]);
+                command.Parameters.AddWithValue("Supplier", list[2]);
+                command.Parameters.AddWithValue("Date", list[3]);
+                command.Parameters.AddWithValue("Prise", list[4]);
+                command.ExecuteNonQuery();
+            }
             connection.Close();
         }
 
         public void Change(string newStr, int index, string name) {
             MakeConnaction();
-            string sql = string.Format($"Update ProductList Set {name} = '{newStr}' Where Id = {index}");
+            string sql = string.Format($"Update ProductList Set {name} = '{newStr}' Where Id = {data[index].Id}");
             command = new SQLiteCommand(sql, connection);
             command.ExecuteNonQuery();
             connection.Close();
@@ -52,7 +55,7 @@ namespace lab4 {
               new SQLiteCommand("select * from ProductList;", connection);
 
             SQLiteDataReader reader = command.ExecuteReader();
-            List<Product> data = new List<Product>();
+            data = new List<Product>();
             while (reader.Read()) {
 
                 for (int i = 0; i < reader.FieldCount; i++) {

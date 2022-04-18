@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace lab4 {
@@ -24,10 +17,10 @@ namespace lab4 {
         bool clickYes = false;
         bool clickNo = false;
         public bool Change() {
-            if (clickNo == true) {
+            if (clickNo) {
                 return false;
             }
-            else if (clickYes == true) {
+            else if (clickYes) {
                 return true;
             }
             return false;

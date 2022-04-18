@@ -23,17 +23,26 @@
         /// содержимое этого метода с помощью редактора кода.
         /// </summary>
         private void InitializeComponent() {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGrid = new System.Windows.Forms.DataGridView();
-            this.buttonDelete = new System.Windows.Forms.Button();
-            this.buttonRefresh = new System.Windows.Forms.Button();
-            this.sqLiteCommand1 = new System.Data.SQLite.SQLiteCommand();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Количество = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Поставщик = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonDelete = new System.Windows.Forms.Button();
+            this.buttonRefresh = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.programSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutProgrammToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -46,7 +55,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Добавить сущность";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.buttonAdd_Click);
+            this.button1.Click += new System.EventHandler(this.ButtonAdd_Click);
             // 
             // dataGrid
             // 
@@ -62,13 +71,55 @@
             this.Column3,
             this.Column4});
             this.dataGrid.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataGrid.Location = new System.Drawing.Point(12, 33);
+            this.dataGrid.Location = new System.Drawing.Point(12, 30);
             this.dataGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowHeadersWidth = 51;
             this.dataGrid.RowTemplate.Height = 24;
-            this.dataGrid.Size = new System.Drawing.Size(814, 354);
+            this.dataGrid.Size = new System.Drawing.Size(814, 357);
             this.dataGrid.TabIndex = 1;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Name";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            // 
+            // Количество
+            // 
+            dataGridViewCellStyle1.Format = "N0";
+            dataGridViewCellStyle1.NullValue = "0";
+            this.Количество.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Количество.HeaderText = "Count";
+            this.Количество.MinimumWidth = 6;
+            this.Количество.Name = "Количество";
+            // 
+            // Поставщик
+            // 
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = "-";
+            this.Поставщик.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Поставщик.HeaderText = "Supplier";
+            this.Поставщик.MinimumWidth = 6;
+            this.Поставщик.Name = "Поставщик";
+            // 
+            // Column3
+            // 
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = "-";
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column3.HeaderText = "Date";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            dataGridViewCellStyle4.Format = "C2";
+            dataGridViewCellStyle4.NullValue = "-";
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column4.HeaderText = "Prise";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
             // 
             // buttonDelete
             // 
@@ -79,7 +130,7 @@
             this.buttonDelete.TabIndex = 2;
             this.buttonDelete.Text = "Удалить сущность";
             this.buttonDelete.UseVisualStyleBackColor = true;
-            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            this.buttonDelete.Click += new System.EventHandler(this.ButtonDelete_Click);
             // 
             // buttonRefresh
             // 
@@ -90,41 +141,47 @@
             this.buttonRefresh.TabIndex = 3;
             this.buttonRefresh.Text = "Изменить сущность";
             this.buttonRefresh.UseVisualStyleBackColor = true;
-            this.buttonRefresh.Click += new System.EventHandler(this.button3_Click);
+            this.buttonRefresh.Click += new System.EventHandler(this.ButtonChange_Click);
             // 
-            // sqLiteCommand1
+            // menuStrip1
             // 
-            this.sqLiteCommand1.CommandText = null;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.programSettingsToolStripMenuItem,
+            this.aboutProgrammToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(982, 28);
+            this.menuStrip1.TabIndex = 4;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // Column2
+            // fileToolStripMenuItem
             // 
-            this.Column2.HeaderText = "Name";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.saveFileToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Text = "File";
             // 
-            // Количество
+            // saveFileToolStripMenuItem
             // 
-            this.Количество.HeaderText = "Count";
-            this.Количество.MinimumWidth = 6;
-            this.Количество.Name = "Количество";
+            this.saveFileToolStripMenuItem.Name = "saveFileToolStripMenuItem";
+            this.saveFileToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
+            this.saveFileToolStripMenuItem.Text = "Save file";
+            this.saveFileToolStripMenuItem.Click += new System.EventHandler(this.SaveFileToolStripMenuItem_Click);
             // 
-            // Поставщик
+            // programSettingsToolStripMenuItem
             // 
-            this.Поставщик.HeaderText = "Supplier";
-            this.Поставщик.MinimumWidth = 6;
-            this.Поставщик.Name = "Поставщик";
+            this.programSettingsToolStripMenuItem.Name = "programSettingsToolStripMenuItem";
+            this.programSettingsToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
+            this.programSettingsToolStripMenuItem.Text = "Program settings";
             // 
-            // Column3
+            // aboutProgrammToolStripMenuItem
             // 
-            this.Column3.HeaderText = "Date";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Prise";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
+            this.aboutProgrammToolStripMenuItem.Name = "aboutProgrammToolStripMenuItem";
+            this.aboutProgrammToolStripMenuItem.Size = new System.Drawing.Size(139, 24);
+            this.aboutProgrammToolStripMenuItem.Text = "About programm";
             // 
             // MainForm
             // 
@@ -135,6 +192,8 @@
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.dataGrid);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(1000, 497);
             this.Name = "MainForm";
@@ -142,7 +201,10 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -152,12 +214,16 @@
         private System.Windows.Forms.DataGridView dataGrid;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonRefresh;
-        private System.Data.SQLite.SQLiteCommand sqLiteCommand1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Количество;
         private System.Windows.Forms.DataGridViewTextBoxColumn Поставщик;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem programSettingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutProgrammToolStripMenuItem;
     }
 }
 
