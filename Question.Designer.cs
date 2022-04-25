@@ -33,7 +33,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textDate = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textPrise = new System.Windows.Forms.TextBox();
+            this.textPrice = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -119,14 +119,14 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 16);
             this.label5.TabIndex = 12;
-            this.label5.Text = "Prise";
+            this.label5.Text = "Price";
             // 
-            // textPrise
+            // textPrice
             // 
-            this.textPrise.Location = new System.Drawing.Point(592, 42);
-            this.textPrise.Name = "textPrise";
-            this.textPrise.Size = new System.Drawing.Size(129, 22);
-            this.textPrise.TabIndex = 11;
+            this.textPrice.Location = new System.Drawing.Point(592, 42);
+            this.textPrice.Name = "textPrice";
+            this.textPrice.Size = new System.Drawing.Size(129, 22);
+            this.textPrice.TabIndex = 11;
             // 
             // Question
             // 
@@ -134,7 +134,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(805, 148);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textPrise);
+            this.Controls.Add(this.textPrice);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textDate);
             this.Controls.Add(this.label3);
@@ -164,6 +164,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textDate;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textPrise;
+        private System.Windows.Forms.TextBox textPrice;
     }
 }

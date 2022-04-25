@@ -9,33 +9,39 @@ namespace lab4 {
         private SQLiteConnection connection;
         public DataBase() { }
         SQLiteCommand command;
-        static List<Product> data;
+        static public List<Product> data;
         public void Add(List<string> list) {
             MakeConnaction();
             if (list != null) {
-                command = new SQLiteCommand($"INSERT INTO [ProductList] ('Name','Count','Supplier','Date','Prise') " +
-                    $"VALUES (@Name,@Count,@Supplier,@Date,@Prise)", connection);
+                command = new SQLiteCommand($"INSERT INTO [ProductList] ('Name','Count','Supplier','Date','Price') " +
+                    $"VALUES (@Name,@Count,@Supplier,@Date,@Price)", connection);
                 command.Parameters.AddWithValue("Name", list[0]);
                 command.Parameters.AddWithValue("Count", list[1]);
                 command.Parameters.AddWithValue("Supplier", list[2]);
                 command.Parameters.AddWithValue("Date", list[3]);
-                command.Parameters.AddWithValue("Prise", list[4]);
+                command.Parameters.AddWithValue("Price", list[4]);
                 command.ExecuteNonQuery();
             }
             connection.Close();
         }
 
-        public void Change(string newStr, int index, string name) {
+        public void Change(Product products,/* List<string> oldStr,*/ int index) {
             MakeConnaction();
-            string sql = string.Format($"Update ProductList Set {name} = '{newStr}' Where Id = {data[index].Id}");
-            command = new SQLiteCommand(sql, connection);
+            command = new SQLiteCommand("Update ProductList Set Name = @Name, Count = @Count, Supplier = @Supplier, Date = @Date, Price = @Price Where Id =@Id", connection);
+            command.Parameters.AddWithValue("Id", data[index].Id);          
+            command.Parameters.AddWithValue("Name", products.Name);
+            command.Parameters.AddWithValue("Count", products.Count);
+            command.Parameters.AddWithValue("Supplier", products.Supplier);
+            command.Parameters.AddWithValue("Date", products.Date);
+            command.Parameters.AddWithValue("Price", products.Price);
             command.ExecuteNonQuery();
             connection.Close();
         }
 
         public void Delete(List<string> list) {
             MakeConnaction();
-            string sql = string.Format("Delete from ProductList where Name = '{0}'", list[0]);
+            string sql = string.Format("Delete from ProductList where Name = @Name");
+            command.Parameters.AddWithValue("Name", list[0]);
             using (SQLiteCommand command = new SQLiteCommand(sql, this.connection)) {
                 try {
                     command.ExecuteNonQuery();
@@ -45,7 +51,6 @@ namespace lab4 {
                     throw error;
                 }
             }
-
             connection.Close();
         }
 
@@ -57,7 +62,6 @@ namespace lab4 {
             SQLiteDataReader reader = command.ExecuteReader();
             data = new List<Product>();
             while (reader.Read()) {
-
                 for (int i = 0; i < reader.FieldCount; i++) {
                     data.Add(new Product() {
                         Id = reader.GetInt32(i++),
@@ -68,9 +72,7 @@ namespace lab4 {
                         Price = reader[i++].ToString()
                     });
                 }
-
             }
-
             connection.Close();
             return data;
         }

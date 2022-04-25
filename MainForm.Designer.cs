@@ -23,10 +23,10 @@
         /// содержимое этого метода с помощью редактора кода.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,7 +40,9 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.programSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showGreetingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutProgrammToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.лабораторнаяРабота4Вариант4РазработчикКолесниковаАлина403ГруппаХранениеСпискаТоваровВМагазинеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +76,7 @@
             this.dataGrid.Location = new System.Drawing.Point(12, 30);
             this.dataGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGrid.Name = "dataGrid";
+            this.dataGrid.ReadOnly = true;
             this.dataGrid.RowHeadersWidth = 51;
             this.dataGrid.RowTemplate.Height = 24;
             this.dataGrid.Size = new System.Drawing.Size(814, 357);
@@ -84,42 +87,47 @@
             this.Column2.HeaderText = "Name";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Количество
             // 
-            dataGridViewCellStyle1.Format = "N0";
-            dataGridViewCellStyle1.NullValue = "0";
-            this.Количество.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Format = "N0";
+            dataGridViewCellStyle5.NullValue = "0";
+            this.Количество.DefaultCellStyle = dataGridViewCellStyle5;
             this.Количество.HeaderText = "Count";
             this.Количество.MinimumWidth = 6;
             this.Количество.Name = "Количество";
+            this.Количество.ReadOnly = true;
             // 
             // Поставщик
             // 
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = "-";
-            this.Поставщик.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Format = "N2";
+            dataGridViewCellStyle6.NullValue = "-";
+            this.Поставщик.DefaultCellStyle = dataGridViewCellStyle6;
             this.Поставщик.HeaderText = "Supplier";
             this.Поставщик.MinimumWidth = 6;
             this.Поставщик.Name = "Поставщик";
+            this.Поставщик.ReadOnly = true;
             // 
             // Column3
             // 
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = "-";
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Format = "d";
+            dataGridViewCellStyle7.NullValue = "-";
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle7;
             this.Column3.HeaderText = "Date";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
-            dataGridViewCellStyle4.Format = "C2";
-            dataGridViewCellStyle4.NullValue = "-";
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column4.HeaderText = "Prise";
+            dataGridViewCellStyle8.Format = "C2";
+            dataGridViewCellStyle8.NullValue = "-";
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Column4.HeaderText = "Price";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // buttonDelete
             // 
@@ -173,15 +181,35 @@
             // 
             // programSettingsToolStripMenuItem
             // 
+            this.programSettingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showGreetingsToolStripMenuItem});
             this.programSettingsToolStripMenuItem.Name = "programSettingsToolStripMenuItem";
             this.programSettingsToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
             this.programSettingsToolStripMenuItem.Text = "Program settings";
+            this.programSettingsToolStripMenuItem.Click += new System.EventHandler(this.programSettingsToolStripMenuItem_Click);
+            // 
+            // showGreetingsToolStripMenuItem
+            // 
+            this.showGreetingsToolStripMenuItem.Name = "showGreetingsToolStripMenuItem";
+            this.showGreetingsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.showGreetingsToolStripMenuItem.Text = "Show greetings";
+            this.showGreetingsToolStripMenuItem.Click += new System.EventHandler(this.showGreetingsToolStripMenuItem_Click_1);
             // 
             // aboutProgrammToolStripMenuItem
             // 
+            this.aboutProgrammToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.лабораторнаяРабота4Вариант4РазработчикКолесниковаАлина403ГруппаХранениеСпискаТоваровВМагазинеToolStripMenuItem});
             this.aboutProgrammToolStripMenuItem.Name = "aboutProgrammToolStripMenuItem";
             this.aboutProgrammToolStripMenuItem.Size = new System.Drawing.Size(139, 24);
             this.aboutProgrammToolStripMenuItem.Text = "About programm";
+            // 
+            // лабораторнаяРабота4Вариант4РазработчикКолесниковаАлина403ГруппаХранениеСпискаТоваровВМагазинеToolStripMenuItem
+            // 
+            this.лабораторнаяРабота4Вариант4РазработчикКолесниковаАлина403ГруппаХранениеСпискаТоваровВМагазинеToolStripMenuItem.Name = "лабораторнаяРабота4Вариант4РазработчикКолесниковаАлина403ГруппаХранениеСпискаТова" +
+    "ровВМагазинеToolStripMenuItem";
+            this.лабораторнаяРабота4Вариант4РазработчикКолесниковаАлина403ГруппаХранениеСпискаТоваровВМагазинеToolStripMenuItem.Size = new System.Drawing.Size(410, 64);
+            this.лабораторнаяРабота4Вариант4РазработчикКолесниковаАлина403ГруппаХранениеСпискаТоваровВМагазинеToolStripMenuItem.Text = "Лабораторная работа №4 Вариант 4 \n Разработчик Колесникова Алина 403 группа.\n Хра" +
+    "нение списка товаров в магазине";
             // 
             // MainForm
             // 
@@ -200,6 +228,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.Shown += new System.EventHandler(this.ShowHello);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -224,6 +253,8 @@
         private System.Windows.Forms.ToolStripMenuItem saveFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem programSettingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutProgrammToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showGreetingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem лабораторнаяРабота4Вариант4РазработчикКолесниковаАлина403ГруппаХранениеСпискаТоваровВМагазинеToolStripMenuItem;
     }
 }
 

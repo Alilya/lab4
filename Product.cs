@@ -13,13 +13,13 @@ namespace lab4 {
         public string Date { get; set; }
         public string Price { get; set; }
         public  string[]  GetStrings() {
-            string[] vs = new string[5];
-            vs[0] = Name;
-            vs[1] = Count;
-            vs[2] = Supplier;
-            vs[3] = Date;
-            vs[4] = Price;
-            return vs;
+            string[] arr = new string[5];
+            arr[0] = Name;
+            arr[1] = Count;
+            arr[2] = Supplier;
+            arr[3] = Date;
+            arr[4] = Price;
+            return arr;
         }
     }
 }

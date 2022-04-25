@@ -8,24 +8,23 @@ using System.Windows.Forms;
 
 namespace lab4 {
     internal class File {
-        public void SaveData(string[] text) {
+        public void SaveData(List<Product> text) {
             var saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
             if (saveFileDialog.ShowDialog() == DialogResult.Cancel)
                 return;
-            // получаем выбранный файл
             string fileName = saveFileDialog.FileName;
-            // сохраняем текст в файл
-
-            for (int i = 0; i < text.Length; i++) {
-                System.IO.File.WriteAllText(fileName, text[i]);
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < text.Count; i++) {
+                sb.Append(text[i].Id + " ");
+                sb.Append(text[i].Name + " ");
+                sb.Append(text[i].Supplier + " ");
+                sb.Append(text[i].Date + " ");
+                sb.Append(text[i].Price + " ");
+                sb.Append('\n');
             }
-           // System.IO.File.WriteAllText(fileName, text);
-
+            System.IO.File.WriteAllText(fileName, sb.ToString());
             MessageBox.Show("Файл сохранен");
-
-
         }
-
     }
 }
