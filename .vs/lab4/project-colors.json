@@ -5,7 +5,12 @@
       "ProjectGuid": "e0f08c91-7a31-4125-b8c0-ff1171165b54",
       "DisplayName": "lab4",
       "ColorIndex": 0
+    },
+    "ddc60225-ded2-436f-84bf-4a8147fad51a": {
+      "ProjectGuid": "ddc60225-ded2-436f-84bf-4a8147fad51a",
+      "DisplayName": "TestLab4",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

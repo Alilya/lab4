@@ -29,11 +29,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGrid = new System.Windows.Forms.DataGridView();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Количество = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Поставщик = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -43,6 +38,11 @@
             this.showGreetingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutProgrammToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.лабораторнаяРабота4Вариант4РазработчикКолесниковаАлина403ГруппаХранениеСпискаТоваровВМагазинеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Количество = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Поставщик = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -81,53 +81,6 @@
             this.dataGrid.RowTemplate.Height = 24;
             this.dataGrid.Size = new System.Drawing.Size(814, 357);
             this.dataGrid.TabIndex = 1;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Name";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Количество
-            // 
-            dataGridViewCellStyle5.Format = "N0";
-            dataGridViewCellStyle5.NullValue = "0";
-            this.Количество.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Количество.HeaderText = "Count";
-            this.Количество.MinimumWidth = 6;
-            this.Количество.Name = "Количество";
-            this.Количество.ReadOnly = true;
-            // 
-            // Поставщик
-            // 
-            dataGridViewCellStyle6.Format = "N2";
-            dataGridViewCellStyle6.NullValue = "-";
-            this.Поставщик.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Поставщик.HeaderText = "Supplier";
-            this.Поставщик.MinimumWidth = 6;
-            this.Поставщик.Name = "Поставщик";
-            this.Поставщик.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            dataGridViewCellStyle7.Format = "d";
-            dataGridViewCellStyle7.NullValue = "-";
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Column3.HeaderText = "Date";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            dataGridViewCellStyle8.Format = "C2";
-            dataGridViewCellStyle8.NullValue = "-";
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Column4.HeaderText = "Price";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
             // 
             // buttonDelete
             // 
@@ -191,7 +144,7 @@
             // showGreetingsToolStripMenuItem
             // 
             this.showGreetingsToolStripMenuItem.Name = "showGreetingsToolStripMenuItem";
-            this.showGreetingsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.showGreetingsToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
             this.showGreetingsToolStripMenuItem.Text = "Show greetings";
             this.showGreetingsToolStripMenuItem.Click += new System.EventHandler(this.showGreetingsToolStripMenuItem_Click_1);
             // 
@@ -211,6 +164,53 @@
             this.лабораторнаяРабота4Вариант4РазработчикКолесниковаАлина403ГруппаХранениеСпискаТоваровВМагазинеToolStripMenuItem.Text = "Лабораторная работа №4 Вариант 4 \n Разработчик Колесникова Алина 403 группа.\n Хра" +
     "нение списка товаров в магазине";
             // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Name";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Количество
+            // 
+            dataGridViewCellStyle5.Format = "N0";
+            dataGridViewCellStyle5.NullValue = "0";
+            this.Количество.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Количество.HeaderText = "Count";
+            this.Количество.MinimumWidth = 6;
+            this.Количество.Name = "Количество";
+            this.Количество.ReadOnly = true;
+            // 
+            // Поставщик
+            // 
+            dataGridViewCellStyle6.Format = "N2";
+            dataGridViewCellStyle6.NullValue = "-";
+            this.Поставщик.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Поставщик.HeaderText = "Supplier";
+            this.Поставщик.MinimumWidth = 6;
+            this.Поставщик.Name = "Поставщик";
+            this.Поставщик.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            dataGridViewCellStyle7.Format = "d";
+            dataGridViewCellStyle7.NullValue = "-";
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Column3.HeaderText = "Date";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            dataGridViewCellStyle8.Format = "C2";
+            dataGridViewCellStyle8.NullValue = "-";
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Column4.HeaderText = "Price";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -226,7 +226,7 @@
             this.MinimumSize = new System.Drawing.Size(1000, 497);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "DataBase App";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Shown += new System.EventHandler(this.ShowHello);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
@@ -243,11 +243,6 @@
         private System.Windows.Forms.DataGridView dataGrid;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonRefresh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Количество;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Поставщик;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveFileToolStripMenuItem;
@@ -255,6 +250,11 @@
         private System.Windows.Forms.ToolStripMenuItem aboutProgrammToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showGreetingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem лабораторнаяРабота4Вариант4РазработчикКолесниковаАлина403ГруппаХранениеСпискаТоваровВМагазинеToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Количество;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Поставщик;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }
 

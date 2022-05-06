@@ -28,7 +28,7 @@ namespace lab4 {
         public void Change(Product products,/* List<string> oldStr,*/ int index) {
             MakeConnaction();
             command = new SQLiteCommand("Update ProductList Set Name = @Name, Count = @Count, Supplier = @Supplier, Date = @Date, Price = @Price Where Id =@Id", connection);
-            command.Parameters.AddWithValue("Id", data[index].Id);          
+            command.Parameters.AddWithValue("Id", data[index].Id);
             command.Parameters.AddWithValue("Name", products.Name);
             command.Parameters.AddWithValue("Count", products.Count);
             command.Parameters.AddWithValue("Supplier", products.Supplier);
@@ -41,16 +41,19 @@ namespace lab4 {
         public void Delete(List<string> list) {
             MakeConnaction();
             string sql = string.Format("Delete from ProductList where Name = @Name");
+
+            command = new SQLiteCommand("Delete from ProductList where Name = @Name", connection);
+
             command.Parameters.AddWithValue("Name", list[0]);
-            using (SQLiteCommand command = new SQLiteCommand(sql, this.connection)) {
-                try {
-                    command.ExecuteNonQuery();
-                }
-                catch (SQLiteException ex) {
-                    Exception error = new Exception("К сожалению, удалить этот продукт нельзя", ex);
-                    throw error;
-                }
+
+            try {
+                command.ExecuteNonQuery();
             }
+            catch (SQLiteException ex) {
+                Exception error = new Exception("К сожалению, удалить этот продукт нельзя", ex);
+                throw error;
+            }
+
             connection.Close();
         }
 
@@ -78,8 +81,7 @@ namespace lab4 {
         }
         public void MakeConnaction() {
             string databaseName = Directory.GetCurrentDirectory().ToString() + "\\DataBase.db";
-            connection =
-                new SQLiteConnection(string.Format("Data Source={0};", databaseName));
+            connection = new SQLiteConnection(string.Format("Data Source={0};", databaseName));
             connection.Open();
         }
     }

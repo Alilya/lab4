@@ -12,6 +12,7 @@ namespace lab4 {
             InitializeComponent();
         }
         DataBase dataBase = new DataBase();
+
         private void MainForm_Load(object sender, EventArgs e) {
             var data = dataBase.GetAll();
             foreach (Product s in data) {
@@ -30,9 +31,9 @@ namespace lab4 {
                 formHello.ShowDialog();
             }
         }
-      
+
         private void ButtonAdd_Click(object sender, EventArgs e) {
-            Question form = new Question();
+            FormChange form = new FormChange();
             form.ShowDialog();
 
             var list = form.Transfer();
@@ -47,9 +48,9 @@ namespace lab4 {
         }
 
         private void ButtonDelete_Click(object sender, EventArgs e) {
-            Question form = new Question();
+            FormChange form = new FormChange();
             List<string> list = new List<string> { };
-            OK ok = new OK();
+            Questions ok = new Questions();
             ok.ShowDialog();
             if (ok.Change() && dataGrid.CurrentCell.Value != null) {
                 for (int i = 0; i < dataGrid.SelectedCells.Count; i++) {
@@ -71,16 +72,15 @@ namespace lab4 {
 
         private void ButtonChange_Click(object sender, EventArgs e) {
             var result = MessageBox.Show("Действительно хотите изменить запись в БД?", "Изменение ячейки", MessageBoxButtons.YesNo);
-            Question form = new Question();
+            FormChange form = new FormChange();
             DataBase db = new DataBase();
 
             List<string> oldValue = new List<string> { };
             for (int i = 0; i < dataGrid.CurrentRow.Cells.Count; i++) {
-
                 oldValue.Add(dataGrid.Rows[dataGrid.SelectedCells[0].RowIndex].Cells[i].Value.ToString());
             }
-
             form.ChangeText(oldValue);
+
             if (result == DialogResult.Yes) {
                 form.ShowDialog();
                 var textIndex = GetIndex();
@@ -92,10 +92,7 @@ namespace lab4 {
                 productNew.Date = arr[3];
                 productNew.Price = arr[4];
 
-
-
                 db.Change(productNew, textIndex);
-
 
                 var data = dataBase.GetAll();
                 dataGrid.Rows.Clear();

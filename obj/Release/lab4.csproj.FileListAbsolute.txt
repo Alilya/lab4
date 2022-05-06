@@ -23,7 +23,6 @@ C:\Users\Alina\Desktop\СПБГТИ(ТУ)\4 семестр\РПС\lab4\lab4\bin\
 C:\Users\Alina\Desktop\СПБГТИ(ТУ)\4 семестр\РПС\lab4\lab4\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Alina\Desktop\СПБГТИ(ТУ)\4 семестр\РПС\lab4\lab4\obj\Release\lab4.csproj.AssemblyReference.cache
 C:\Users\Alina\Desktop\СПБГТИ(ТУ)\4 семестр\РПС\lab4\lab4\obj\Release\lab4.csproj.SuggestedBindingRedirects.cache
-C:\Users\Alina\Desktop\СПБГТИ(ТУ)\4 семестр\РПС\lab4\lab4\obj\Release\lab4.Form.resources
 C:\Users\Alina\Desktop\СПБГТИ(ТУ)\4 семестр\РПС\lab4\lab4\obj\Release\lab4.MainForm.resources
 C:\Users\Alina\Desktop\СПБГТИ(ТУ)\4 семестр\РПС\lab4\lab4\obj\Release\lab4.Properties.Resources.resources
 C:\Users\Alina\Desktop\СПБГТИ(ТУ)\4 семестр\РПС\lab4\lab4\obj\Release\lab4.csproj.GenerateResource.cache
@@ -31,3 +30,6 @@ C:\Users\Alina\Desktop\СПБГТИ(ТУ)\4 семестр\РПС\lab4\lab4\obj\
 C:\Users\Alina\Desktop\СПБГТИ(ТУ)\4 семестр\РПС\lab4\lab4\obj\Release\lab4.csproj.CopyComplete
 C:\Users\Alina\Desktop\СПБГТИ(ТУ)\4 семестр\РПС\lab4\lab4\obj\Release\lab4.exe
 C:\Users\Alina\Desktop\СПБГТИ(ТУ)\4 семестр\РПС\lab4\lab4\obj\Release\lab4.pdb
+C:\Users\Alina\Desktop\СПБГТИ(ТУ)\4 семестр\РПС\lab4\lab4\obj\Release\lab4.FormHello.resources
+C:\Users\Alina\Desktop\СПБГТИ(ТУ)\4 семестр\РПС\lab4\lab4\obj\Release\lab4.Question.resources
+C:\Users\Alina\Desktop\СПБГТИ(ТУ)\4 семестр\РПС\lab4\lab4\obj\Release\lab4.OK.resources
